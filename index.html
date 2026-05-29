@@ -8,383 +8,66 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: #f2ece0;
-    font-family: 'Jost', sans-serif;
-    color: #2e2416;
-    min-height: 100vh;
-    padding: 0 0 40px;
-  }
-
-  .page {
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-
-  /* HERO */
-  .hero {
-    max-width: 480px;
-    margin: 0 auto 20px;
-    overflow: hidden;
-  }
-
-  .hero-photo {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    background: linear-gradient(180deg, #8fafbf 0%, #6a94a8 60%, #b8c8d4 100%);
-  }
-
-  .hero-arch-wrap {
-    background: #e8dcc8;
-    display: flex;
-    justify-content: center;
-    padding: 0 40px 32px;
-  }
-
-  .hero-arch {
-    background: #e8dcc8;
-    border-radius: 160px 160px 0 0;
-    padding: 28px 32px 0;
-    text-align: center;
-    width: 100%;
-    max-width: 320px;
-    position: relative;
-    top: -1px;
-  }
-
-  .hero-sub {
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #7a6a52;
-    margin-bottom: 2px;
-  }
-
-  .hero-date {
-    font-family: 'Jost', sans-serif;
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #8a7a62;
-    margin: 8px 0 12px;
-  }
-
-  .hero-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    letter-spacing: 4px;
-    line-height: 1.15;
-    color: #2e2416;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-
-  .hero-tag {
-    font-family: 'Jost', sans-serif;
-    font-size: 10px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: #8a7a62;
-    padding-bottom: 8px;
-  }
-
-  /* CARDS */
-  .card {
-    background: #fff;
-    border-radius: 18px;
-    margin-bottom: 14px;
-    overflow: hidden;
-    border: 1px solid #e0d5c2;
-  }
-
-  .card-header {
-    padding: 18px 20px 16px;
-    border-bottom: 1px solid #ede5d4;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .card-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #e8dcc8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    font-size: 18px;
-  }
-
-  .card-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: #2e2416;
-  }
-
-  .card-subtitle {
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #8a7a62;
-    margin-top: 2px;
-  }
-
-  .toggle-icon {
-    margin-left: auto;
-    font-size: 20px;
-    color: #a89a84;
-    transition: transform 0.25s ease;
-    flex-shrink: 0;
-  }
-
+  body { background: #f2ece0; font-family: 'Jost', sans-serif; color: #2e2416; min-height: 100vh; padding: 0 0 40px; }
+  .page { max-width: 480px; margin: 0 auto; padding: 0 16px; }
+  .hero { max-width: 480px; margin: 0 auto 20px; overflow: hidden; }
+  .hero-photo { width: 100%; height: 240px; object-fit: cover; display: block; }
+  .hero-arch-wrap { background: #e8dcc8; display: flex; justify-content: center; padding: 0 40px 32px; }
+  .hero-arch { background: #e8dcc8; border-radius: 160px 160px 0 0; padding: 28px 32px 0; text-align: center; width: 100%; max-width: 320px; position: relative; top: -1px; }
+  .hero-sub { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7a6a52; margin-bottom: 2px; }
+  .hero-date { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 2px; color: #8a7a62; margin: 8px 0 12px; }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; letter-spacing: 4px; line-height: 1.15; color: #2e2416; text-transform: uppercase; margin-bottom: 10px; }
+  .hero-tag { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #8a7a62; padding-bottom: 8px; }
+  .card { background: #fff; border-radius: 18px; margin-bottom: 14px; overflow: hidden; border: 1px solid #e0d5c2; }
+  .card-header { padding: 18px 20px 16px; border-bottom: 1px solid #ede5d4; display: flex; align-items: center; gap: 12px; cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+  .card-icon { width: 40px; height: 40px; border-radius: 50%; background: #e8dcc8; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
+  .card-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #2e2416; }
+  .card-subtitle { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #8a7a62; margin-top: 2px; }
+  .toggle-icon { margin-left: auto; font-size: 20px; color: #a89a84; transition: transform 0.25s ease; flex-shrink: 0; }
   .card.collapsed .toggle-icon { transform: rotate(-90deg); }
   .card.collapsed .card-body { display: none; }
-
-  .card-body {
-    padding: 18px 20px 22px;
-  }
-
-  /* DAY LABEL */
-  .day-label {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #8a7a62;
-    font-weight: 500;
-    margin-bottom: 14px;
-  }
-
-  /* STOP ROW */
-  .stop-row {
-    display: flex;
-    gap: 14px;
-    margin-bottom: 18px;
-    align-items: flex-start;
-  }
-
-  .stop-time {
-    font-size: 13px;
-    color: #8a7a62;
-    min-width: 50px;
-    padding-top: 2px;
-    flex-shrink: 0;
-  }
-
-  .stop-name {
-    font-size: 16px;
-    font-weight: 500;
-    color: #2e2416;
-    margin-bottom: 4px;
-    line-height: 1.3;
-  }
-
-  .stop-note {
-    font-size: 14px;
-    color: #6b5e4a;
-    line-height: 1.6;
-    margin-bottom: 8px;
-  }
-
-  .map-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    font-weight: 500;
-    color: #4a3520;
-    background: #e8dcc8;
-    border: none;
-    border-radius: 20px;
-    padding: 6px 14px;
-    cursor: pointer;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    transition: background 0.15s;
-  }
-
+  .card-body { padding: 18px 20px 22px; }
+  .day-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #8a7a62; font-weight: 500; margin-bottom: 14px; }
+  .stop-row { display: flex; gap: 14px; margin-bottom: 18px; align-items: flex-start; }
+  .stop-time { font-size: 13px; color: #8a7a62; min-width: 50px; padding-top: 2px; flex-shrink: 0; }
+  .stop-name { font-size: 16px; font-weight: 500; color: #2e2416; margin-bottom: 4px; line-height: 1.3; }
+  .stop-note { font-size: 14px; color: #6b5e4a; line-height: 1.6; margin-bottom: 8px; }
+  .map-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: #4a3520; background: #e8dcc8; border: none; border-radius: 20px; padding: 6px 14px; cursor: pointer; text-decoration: none; letter-spacing: 0.5px; transition: background 0.15s; margin-right: 6px; margin-bottom: 4px; }
   .map-btn:hover { background: #d4c4a8; }
-
-  .divider {
-    height: 1px;
-    background: #ede5d4;
-    margin: 14px 0;
-  }
-
-  /* AIRBNB */
-  .airbnb-block {
-    background: #f5efe4;
-    border-radius: 14px;
-    padding: 18px;
-    margin-bottom: 14px;
-  }
-
-  .airbnb-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
-    font-weight: 600;
-    color: #2e2416;
-    margin-bottom: 6px;
-  }
-
-  .airbnb-detail {
-    font-size: 14px;
-    color: #6b5e4a;
-    line-height: 1.7;
-    margin-bottom: 12px;
-  }
-
-  .airbnb-detail strong {
-    color: #4a3520;
-    font-weight: 500;
-  }
-
-  .airbnb-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-weight: 500;
-    color: #4a3520;
-    background: #c9b99a;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 18px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.15s;
-  }
-
+  .web-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: #fff; background: #8a7a62; border: none; border-radius: 20px; padding: 6px 14px; cursor: pointer; text-decoration: none; letter-spacing: 0.5px; transition: background 0.15s; margin-bottom: 4px; }
+  .web-btn:hover { background: #6b5e4a; }
+  .divider { height: 1px; background: #ede5d4; margin: 14px 0; }
+  .spot-img { width: 100%; height: 160px; object-fit: cover; border-radius: 12px; margin-bottom: 10px; background: #e8dcc8; display: block; }
+  .airbnb-block { background: #f5efe4; border-radius: 14px; padding: 18px; margin-bottom: 14px; }
+  .airbnb-name { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 600; color: #2e2416; margin-bottom: 6px; }
+  .airbnb-detail { font-size: 14px; color: #6b5e4a; line-height: 1.7; margin-bottom: 12px; }
+  .airbnb-detail strong { color: #4a3520; font-weight: 500; }
+  .airbnb-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: #4a3520; background: #c9b99a; border: none; border-radius: 20px; padding: 8px 18px; cursor: pointer; text-decoration: none; transition: background 0.15s; }
   .airbnb-btn:hover { background: #b8a888; }
-
-  /* FOOD */
-  .food-row {
-    padding: 14px 0;
-    border-bottom: 1px solid #ede5d4;
-  }
-
+  .food-row { padding: 14px 0; border-bottom: 1px solid #ede5d4; }
   .food-row:last-child { border-bottom: none; padding-bottom: 0; }
   .food-row:first-child { padding-top: 0; }
-
-  .food-meal {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #8a7a62;
-    font-weight: 500;
-    margin-bottom: 4px;
-  }
-
-  .food-name {
-    font-size: 16px;
-    font-weight: 500;
-    color: #2e2416;
-    margin-bottom: 2px;
-  }
-
-  .food-note {
-    font-size: 13px;
-    color: #6b5e4a;
-    line-height: 1.5;
-  }
-
-  /* PACK */
-  .pack-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-
-  .pack-cat {
-    background: #f5efe4;
-    border-radius: 14px;
-    padding: 14px;
-  }
-
-  .pack-cat-title {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #8a7a62;
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
-
-  .pack-item {
-    font-size: 13px;
-    color: #2e2416;
-    padding: 4px 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 7px;
-    line-height: 1.4;
-  }
-
-  .check {
-    color: #a89a84;
-    font-size: 14px;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
-  /* FOOTER */
-  .footer {
-    text-align: center;
-    padding: 24px 0 8px;
-  }
-
-  .footer-serif {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    font-style: italic;
-    color: #8a7a62;
-    margin-bottom: 6px;
-  }
-
-  .footer-tag {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #a89a84;
-  }
-
-  /* GOOD TO KNOW */
-  .info-note {
-    font-size: 13px;
-    color: #6b5e4a;
-    line-height: 1.7;
-    background: #f5efe4;
-    border-radius: 10px;
-    padding: 12px 14px;
-    margin-top: 10px;
-  }
-
-  .info-note strong {
-    display: block;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #8a7a62;
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
+  .food-meal { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #8a7a62; font-weight: 500; margin-bottom: 4px; }
+  .food-name { font-size: 16px; font-weight: 500; color: #2e2416; }
+  .pack-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .pack-cat { background: #f5efe4; border-radius: 14px; padding: 14px; }
+  .pack-cat-title { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #8a7a62; font-weight: 500; margin-bottom: 10px; }
+  .pack-item { font-size: 13px; color: #2e2416; padding: 4px 0; display: flex; align-items: flex-start; gap: 7px; line-height: 1.4; }
+  .check { color: #a89a84; font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+  .footer { text-align: center; padding: 24px 0 8px; }
+  .footer-serif { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: #8a7a62; margin-bottom: 6px; }
+  .footer-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #a89a84; }
+  .chef-badge { display: inline-block; font-size: 11px; letter-spacing: 1px; background: #e8dcc8; color: #7a6a52; border-radius: 20px; padding: 3px 10px; margin-left: 6px; vertical-align: middle; }
 </style>
 </head>
 <body>
 
 <!-- HERO -->
 <div class="hero">
-  <!-- Replace the div below with an <img src="YOUR-PHOTO.jpg"> tag if you have a photo -->
-  <div class="hero-photo"></div>
+  <img class="hero-photo"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Morro_Rock%2C_Morro_Bay%2C_CA_-_2013-01-19.jpg/1280px-Morro_Rock%2C_Morro_Bay%2C_CA_-_2013-01-19.jpg"
+    alt="Morro Rock at Morro Bay, California"
+    onerror="this.style.background='linear-gradient(180deg,#8fafbf 0%,#6a94a8 60%,#b8c8d4 100%)';this.src='';">
   <div class="hero-arch-wrap">
     <div class="hero-arch">
       <div class="hero-sub">Myrna &amp; Rudy's</div>
@@ -410,15 +93,15 @@
     </div>
     <div class="card-body">
       <div class="airbnb-block">
-        <div class="airbnb-name">COLORFUL & CREATIVE HOME</div>
+        <div class="airbnb-name">Colorful Home in Arroyo Grande</div>
         <div class="airbnb-detail">
-          <strong>Address:</strong> 2455 Mustang Dr. Arroyo Grande, CA<br>
-          <strong>Check-in:</strong> After 4:00pm · Check-out by 11:00am<br>
+          <strong>Address:</strong> 2455 Mustang Dr, Arroyo Grande, CA 93420<br>
+          <strong>Check-in:</strong> After 4:00pm · Check-out by 11:00am
         </div>
-        <a class="airbnb-btn" href="https://www.google.com/maps/dir//35.072498,-120.5795105/@38.5659958,-121.5255809,15z?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-          ↗ View Listing
-        </a>
+        <a class="airbnb-btn" href="https://www.airbnb.com/rooms/694792902357205766?source_impression_id=p3_1780091791_P3TRCFQrIOag9h58" target="_blank">↗ View Listing</a>
       </div>
+    </div>
+  </div>
 
   <!-- FRIDAY -->
   <div class="card" id="card-fri">
@@ -431,21 +114,21 @@
       <span class="toggle-icon">›</span>
     </div>
     <div class="card-body">
-      <div class="day-label">Afternoon</div>
+      <div class="day-label">Morning to Afternoon</div>
 
       <div class="stop-row">
-        <div class="stop-time">2:00p</div>
+        <div class="stop-time">9:00a</div>
         <div>
-          <div class="stop-name">Depart for Morro Bay</div>
-          <div class="stop-note">~3.5 hrs from Sacramento via Hwy 99 S to Hwy 46 W. Scenic stretch near Paso Robles — consider a pit stop.</div>
+          <div class="stop-name">Depart for Arroyo Grande</div>
+          <div class="stop-note">4.5–5 hours depending on traffic — whether you're coming from Pittsburg or West Sacramento. Plan accordingly!</div>
         </div>
       </div>
 
       <div class="stop-row">
-        <div class="stop-time">5:30p</div>
+        <div class="stop-time">4:00p</div>
         <div>
           <div class="stop-name">Check in to Airbnb</div>
-          <div class="stop-note">Settle in, freshen up, get oriented.</div>
+          <div class="stop-note">Settle in, kick your feet up, and get oriented. You made it!</div>
         </div>
       </div>
 
@@ -453,11 +136,9 @@
       <div class="day-label">Evening</div>
 
       <div class="stop-row">
-        <div class="stop-time">7:00p</div>
-        <div>
-          <div class="stop-name">YOUR FRIDAY DINNER SPOT</div>
-          <div class="stop-note">Add restaurant notes, what you're ordering, reservation details.</div>
-          <a class="map-btn" href="YOUR-GOOGLE-MAPS-LINK" target="_blank">📍 Open in Maps</a>
+        <div style="flex:1">
+          <div class="stop-name">Evening at the Airbnb</div>
+          <div class="stop-note">Pour a drink, put on some music, and ease into the weekend.</div>
         </div>
       </div>
     </div>
@@ -477,20 +158,21 @@
       <div class="day-label">Morning</div>
 
       <div class="stop-row">
-        <div class="stop-time">9:00a</div>
-        <div>
-          <div class="stop-name">YOUR MORNING STOP</div>
-          <div class="stop-note">Add notes — parking, what to see, how long you'll be, accessibility info.</div>
-          <a class="map-btn" href="YOUR-GOOGLE-MAPS-LINK" target="_blank">📍 Open in Maps</a>
+        <div style="flex:1">
+          <div class="stop-name">Breakfast</div>
+          <div class="stop-note">Start the day right before heading out on the road.</div>
         </div>
       </div>
 
       <div class="stop-row">
-        <div class="stop-time">10:30a</div>
-        <div>
-          <div class="stop-name">YOUR SECOND STOP</div>
-          <div class="stop-note">Add notes here.</div>
-          <a class="map-btn" href="YOUR-GOOGLE-MAPS-LINK" target="_blank">📍 Open in Maps</a>
+        <div style="flex:1">
+          <img class="spot-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Solvang%2C_CA_%282025%29.jpg/1280px-Solvang%2C_CA_%282025%29.jpg"
+            alt="Solvang California Danish village street"
+            onerror="this.style.display='none'">
+          <div class="stop-name">Solvang</div>
+          <div class="stop-note">Welcome to California's little Denmark! Stroll the charming streets, browse the boutiques, grab a Danish pastry, and soak in the windmills and gabled rooftops. Easy walking, great photo spots.</div>
+          <a class="map-btn" href="https://www.google.com/maps/place/Solvang,+CA" target="_blank">📍 Open in Maps</a>
         </div>
       </div>
 
@@ -498,20 +180,38 @@
       <div class="day-label">Afternoon</div>
 
       <div class="stop-row">
-        <div class="stop-time">12:30p</div>
-        <div>
-          <div class="stop-name">Lunch — YOUR RESTAURANT</div>
-          <div class="stop-note">Add notes, what's good to order, if there's a wait.</div>
-          <a class="map-btn" href="YOUR-GOOGLE-MAPS-LINK" target="_blank">📍 Open in Maps</a>
+        <div style="flex:1">
+          <img class="spot-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/OstrichLand_USA.jpg/1280px-OstrichLand_USA.jpg"
+            alt="OstrichLand USA"
+            onerror="this.style.background='#e8dcc8';this.alt='OstrichLand USA';">
+          <div class="stop-name">OstrichLand USA</div>
+          <div class="stop-note">Hold on tight to the feed bowl — these giant birds mean business! Over 150 ostriches and emus roaming a 32-acre ranch. Hilarious, unforgettable, and only $5 to get in.</div>
+          <a class="map-btn" href="https://www.google.com/maps/place/OstrichLand+USA,+610+E+Hwy+246,+Buellton,+CA+93427" target="_blank">📍 Open in Maps</a>
         </div>
       </div>
 
       <div class="stop-row">
-        <div class="stop-time">2:30p</div>
-        <div>
-          <div class="stop-name">YOUR AFTERNOON ACTIVITY</div>
-          <div class="stop-note">Add notes — how much walking, shaded seating, parking, cost.</div>
-          <a class="map-btn" href="YOUR-GOOGLE-MAPS-LINK" target="_blank">📍 Open in Maps</a>
+        <div style="flex:1">
+          <img class="spot-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Avila_Valley_Barn%2C_Avila_Beach%2C_CA.jpg/1280px-Avila_Valley_Barn%2C_Avila_Beach%2C_CA.jpg"
+            alt="Avila Valley Barn"
+            onerror="this.style.background='#e8dcc8';this.style.display='block';">
+          <div class="stop-name">Avila Valley Barn</div>
+          <div class="stop-note">A beloved farm stand between the highway and Avila Beach. Fresh fruit, homemade pies, ice cream, a petting zoo, and the best tri-tip sandwiches on the Central Coast.</div>
+          <a class="map-btn" href="https://www.google.com/maps?cid=2280173080968721635" target="_blank">📍 Open in Maps</a>
+        </div>
+      </div>
+
+      <div class="stop-row">
+        <div style="flex:1">
+          <img class="spot-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Port_San_Luis_Pier%2C_Avila_Beach%2C_California.jpg/1280px-Port_San_Luis_Pier%2C_Avila_Beach%2C_California.jpg"
+            alt="Avila Pier at Port San Luis"
+            onerror="this.style.background='#d4ccc0';this.style.display='block';">
+          <div class="stop-name">Avila Pier</div>
+          <div class="stop-note">Take a stroll out over the water at historic Port San Luis. Beautiful views and fresh ocean air.</div>
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Port+San+Luis+Pier,+3975+Avila+Beach+Dr,+San+Luis+Obispo,+CA&query_place_id=ChIJ0WkJs1n47IARlZ_vIdcZX4g" target="_blank">📍 Open in Maps</a>
         </div>
       </div>
 
@@ -519,19 +219,21 @@
       <div class="day-label">Evening</div>
 
       <div class="stop-row">
-        <div class="stop-time">5:00p</div>
-        <div>
-          <div class="stop-name">Back to Airbnb — rest & freshen up</div>
-          <div class="stop-note">Take it easy before the big dinner!</div>
+        <div style="flex:1">
+          <div class="stop-name">Airbnb Pit Stop</div>
+          <div class="stop-note">Head back, freshen up, and eat dinner at the house before heading out for the night.</div>
         </div>
       </div>
 
       <div class="stop-row">
-        <div class="stop-time">6:30p</div>
-        <div>
-          <div class="stop-name">🎉 Birthday Dinner</div>
-          <div class="stop-note">Add restaurant name, reservation info, dress code, and what to order.</div>
-          <a class="map-btn" href="YOUR-GOOGLE-MAPS-LINK" target="_blank">📍 Open in Maps</a>
+        <div style="flex:1">
+          <img class="spot-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Pismo_Beach_Pier.jpg/1280px-Pismo_Beach_Pier.jpg"
+            alt="Pismo Beach Pier"
+            onerror="this.style.background='#c8d8e0';this.style.display='block';">
+          <div class="stop-name">Pismo Beach</div>
+          <div class="stop-note">End the night on the waterfront — stroll the pier, browse the shops along Price Street, or just take in the ocean breeze. Laid-back and beautiful at night.</div>
+          <a class="map-btn" href="https://www.google.com/maps/place/Pismo+Beach,+CA" target="_blank">📍 Open in Maps</a>
         </div>
       </div>
     </div>
@@ -551,27 +253,51 @@
       <div class="day-label">Morning</div>
 
       <div class="stop-row">
-        <div class="stop-time">9:00a</div>
-        <div>
-          <div class="stop-name">Brunch before we go</div>
-          <div class="stop-note">Add your Sunday brunch spot or keep it flexible.</div>
-          <a class="map-btn" href="YOUR-GOOGLE-MAPS-LINK" target="_blank">📍 Open in Maps</a>
+        <div style="flex:1">
+          <div class="stop-name">Breakfast</div>
+          <div class="stop-note">One last good meal before the road.</div>
         </div>
       </div>
 
       <div class="stop-row">
-        <div class="stop-time">11:00a</div>
-        <div>
-          <div class="stop-name">Check out of Airbnb</div>
-          <div class="stop-note">Checkout by 11am. Leave keys as instructed.</div>
+        <div style="flex:1">
+          <div class="stop-name">Check Out of Airbnb</div>
+          <div class="stop-note">Check-out by 11:00am. Leave keys as instructed and double-check you have everything!</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="day-label">Afternoon</div>
+
+      <div class="stop-row">
+        <div style="flex:1">
+          <img class="spot-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Morro_Rock%2C_Morro_Bay%2C_CA_-_2013-01-19.jpg/1280px-Morro_Rock%2C_Morro_Bay%2C_CA_-_2013-01-19.jpg"
+            alt="Morro Rock and Morro Bay"
+            onerror="this.style.background='#c8d8e0';this.style.display='block';">
+          <div class="stop-name">Morro Bay</div>
+          <div class="stop-note">A scenic detour worth every minute — stroll the Embarcadero, spot the famous Morro Rock, and watch the sea otters if you're lucky.</div>
+          <a class="map-btn" href="https://www.google.com/maps/place/Morro+Bay,+CA" target="_blank">📍 Open in Maps</a>
         </div>
       </div>
 
       <div class="stop-row">
-        <div class="stop-time">11:30a</div>
-        <div>
-          <div class="stop-name">Drive home</div>
-          <div class="stop-note">Safe travels! ~3.5 hrs back to Sacramento.</div>
+        <div style="flex:1">
+          <img class="spot-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Hearst_castle_facade.jpg/1280px-Hearst_castle_facade.jpg"
+            alt="Hearst Castle San Simeon California"
+            onerror="this.style.background='#d8d0c4';this.style.display='block';">
+          <div class="stop-name">Hearst Castle</div>
+          <div class="stop-note">One of California's most iconic landmarks — a 115-room hilltop estate built by William Randolph Hearst. Tours are timed and ticketed, so book ahead if you plan to go inside.</div>
+          <a class="map-btn" href="https://www.google.com/maps/place/Hearst+Castle/@35.6852119,-121.1704138,17z" target="_blank">📍 Open in Maps</a>
+          <a class="web-btn" href="https://hearstcastle.org" target="_blank">↗ Book Tickets</a>
+        </div>
+      </div>
+
+      <div class="stop-row">
+        <div style="flex:1">
+          <div class="stop-name">Head Home</div>
+          <div class="stop-note">Safe travels! Take Hwy 1 to 101 North back up toward home. Factor in a rest stop or two — it's been a full weekend!</div>
         </div>
       </div>
     </div>
@@ -583,35 +309,30 @@
       <div class="card-icon">🍽️</div>
       <div>
         <div class="card-title">Food Schedule</div>
-        <div class="card-subtitle">All meals at a glance</div>
+        <div class="card-subtitle">Chef Spotlight</div>
       </div>
       <span class="toggle-icon">›</span>
     </div>
     <div class="card-body">
       <div class="food-row">
         <div class="food-meal">Friday Dinner</div>
-        <div class="food-name">YOUR RESTAURANT NAME</div>
-        <div class="food-note">Address · Reservation at X:XXpm</div>
+        <div class="food-name">Janet <span class="chef-badge">👩‍🍳 Chef</span></div>
       </div>
       <div class="food-row">
         <div class="food-meal">Saturday Breakfast</div>
-        <div class="food-name">At the Airbnb or add a spot</div>
-        <div class="food-note">Add notes — bring groceries or go out?</div>
+        <div class="food-name">Rachelle <span class="chef-badge">👩‍🍳 Chef</span></div>
       </div>
       <div class="food-row">
-        <div class="food-meal">Saturday Lunch</div>
-        <div class="food-name">YOUR RESTAURANT NAME</div>
-        <div class="food-note">Known for fresh catch · Easy parking nearby</div>
+        <div class="food-meal">Saturday Snacks on the Go</div>
+        <div class="food-name">Rachelle <span class="chef-badge">👩‍🍳 Chef</span></div>
       </div>
       <div class="food-row">
         <div class="food-meal">Saturday Dinner</div>
-        <div class="food-name">🎉 Birthday Dinner — YOUR SPOT</div>
-        <div class="food-note">Reservation confirmed · Dress casually nice</div>
+        <div class="food-name">Janet <span class="chef-badge">👩‍🍳 Chef</span></div>
       </div>
       <div class="food-row">
-        <div class="food-meal">Sunday Brunch</div>
-        <div class="food-name">Before heading home</div>
-        <div class="food-note">Add spot or keep it flexible</div>
+        <div class="food-meal">Sunday Breakfast</div>
+        <div class="food-name">Melinda <span class="chef-badge">👩‍🍳 Chef</span></div>
       </div>
     </div>
   </div>
@@ -632,7 +353,7 @@
           <div class="pack-cat-title">Clothing</div>
           <div class="pack-item"><span class="check">✓</span>Layers for cool evenings</div>
           <div class="pack-item"><span class="check">✓</span>Comfortable walking shoes</div>
-          <div class="pack-item"><span class="check">✓</span>One nicer outfit for dinner</div>
+          <div class="pack-item"><span class="check">✓</span>Nice outfits for pictures</div>
           <div class="pack-item"><span class="check">✓</span>Light jacket or windbreaker</div>
         </div>
         <div class="pack-cat">
@@ -640,14 +361,14 @@
           <div class="pack-item"><span class="check">✓</span>Sunscreen SPF 50+</div>
           <div class="pack-item"><span class="check">✓</span>Sunglasses &amp; hat</div>
           <div class="pack-item"><span class="check">✓</span>Reusable water bottle</div>
-          <div class="pack-item"><span class="check">✓</span>Beach chairs if needed</div>
+          <div class="pack-item"><span class="check">✓</span>Beach blanket &amp; supplies</div>
         </div>
         <div class="pack-cat">
           <div class="pack-cat-title">Practical</div>
           <div class="pack-item"><span class="check">✓</span>Phone &amp; charger</div>
           <div class="pack-item"><span class="check">✓</span>Medications</div>
           <div class="pack-item"><span class="check">✓</span>Snacks for the drive</div>
-          <div class="pack-item"><span class="check">✓</span>Cash for small shops</div>
+          <div class="pack-item"><span class="check">✓</span>Portable phone charger</div>
         </div>
         <div class="pack-cat">
           <div class="pack-cat-title">For the Celebration</div>
